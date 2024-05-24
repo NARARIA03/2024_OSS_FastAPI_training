@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "http://44.220.221.72:8080";
 
 /**
  * @type {HTMLElement}

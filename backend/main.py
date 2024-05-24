@@ -10,8 +10,7 @@ app.include_router(todo_router) # todo_router 연결
 origins = [
     "https://127.0.0.1:5500", 
     "http://127.0.0.1:5500", 
-    "https://44.220.221.72", 
-    "http://44.220.221.72"
+    "http://44.220.221.72:8081"
 ]
 
 # app 객체에게 middleware 추가
