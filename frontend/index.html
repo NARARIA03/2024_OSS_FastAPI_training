@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="./js/custom.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo List</h1>
+      <input type="text" name="todo" id="todo" placeholder="Add new Todo" />
+      <div class="todo-wrapper">
+        <div class="todo-item">
+          <p>책읽기</p>
+          <button class="delete-btn">X</button>
+        </div>
+        <div class="todo-item">
+          <p>헬스장 가기</p>
+          <button class="delete-btn">X</button>
+        </div>
+        <div class="todo-item">
+          <p>지능형로봇사업단에 행정서류 제출하기</p>
+          <button class="delete-btn">X</button>
+        </div>
+        <div class="todo-item">
+          <p>학과사무실에 가서 빈 강의실 예약하기</p>
+          <button class="delete-btn">X</button>
+        </div>
+        <div class="todo-item">
+          <p>스터디 자료 준비하기</p>
+          <button class="delete-btn">X</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
