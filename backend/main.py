@@ -4,23 +4,24 @@ from todo import todo_router
 import uvicorn
 
 app = FastAPI()
-app.include_router(todo_router) # todo_router 연결
+app.include_router(todo_router)  # todo_router 연결
 
 # CORS를 피하기 위해 FE 접속 경로를 등록
 origins = [
-    "https://127.0.0.1:5500", 
-    "http://127.0.0.1:5500", 
-    "http://44.220.221.72:8081"
+    "https://127.0.0.1:5500",
+    "http://127.0.0.1:5500",
+    "http://44.220.221.72:8081",
 ]
 
 # app 객체에게 middleware 추가
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = origins,
-    allow_credentials = True,
-    allow_methods = ["*"],
-    allow_headers = ["*"],
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
+
 
 @app.get("/")
 async def welcome() -> dict:
@@ -28,5 +29,6 @@ async def welcome() -> dict:
         "msg": "hello world!",
     }
 
-if __name__ == '__main__':
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8002, reload=True)
